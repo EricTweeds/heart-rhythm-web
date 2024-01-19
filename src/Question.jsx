@@ -17,32 +17,43 @@ const Question = ({ info, handleNav }) => {
   };
 
   const handleNext = () => {
-    handleNav(info.next, info.options[selected], subOptionVal);
+    const next = info.options[selected].next ?? info.next;
+    handleNav(next, info.options[selected], subOptionVal);
+    setSelected(null);
+    setSubOptionVal(null);
+    setSubOptions([]);
   };
 
   const handlePrev = () => {
     handleNav(info.prev, info.options[selected], subOptionVal);
+    setSelected(null);
+    setSubOptionVal(null);
+    setSubOptions([]);
   };
 
   const renderSubOption = (option) => {
     switch (option.type) {
       case "number":
         return (
-          <div className={styles.subOptions}>
+          <div className={styles.subOptions} key={option.label}>
             <div>{option.label}</div>
             <input
               type="number"
-              value={subOptionVal}
+              value={subOptionVal ?? 0}
               onChange={(e) => setSubOptionVal(e.target.value)}
             />
           </div>
         );
       case "boolean":
         return (
-          <div className={styles.subOptions}>
+          <div className={styles.subOptions} key={option.label}>
             <Button
-              onClick={() => setSubOptionVal(subOptionVal !== true)}
-              variant={subOptionVal === true ? "contained" : "outlined"}
+              onClick={() =>
+                setSubOptionVal(
+                  subOptionVal === option.label ? null : option.label
+                )
+              }
+              variant={subOptionVal === option.label ? "contained" : "outlined"}
             >
               {option.label}
             </Button>
@@ -54,20 +65,18 @@ const Question = ({ info, handleNav }) => {
   };
   return (
     <div className={styles.question}>
-      <div>{info.question}</div>
+      <div className={styles.title}>{info.question}</div>
       <div className={styles.optionRow}>
         {info.options.map((option, i) => {
-          if (option.type === "boolean") {
-            return (
-              <Button
-                variant={selected === i ? "contained" : "outlined"}
-                onClick={() => handleSelection(i)}
-              >
-                {option.label}
-              </Button>
-            );
-          }
-          return null;
+          return (
+            <Button
+              key={option.label}
+              variant={selected === i ? "contained" : "outlined"}
+              onClick={() => handleSelection(i)}
+            >
+              {option.label}
+            </Button>
+          );
         })}
       </div>
       {subOptions.length ? (
@@ -79,26 +88,46 @@ const Question = ({ info, handleNav }) => {
       ) : null}
       <div className={styles.navRow}>
         {info.prev ? <Button onClick={handlePrev}>Prev</Button> : null}
-        {info.next ? <Button onClick={handleNext}>Next</Button> : null}
+        {info.next ? (
+          <Button
+            onClick={handleNext}
+            disabled={selected === null || (subOptions.length && !subOptionVal)}
+          >
+            Next
+          </Button>
+        ) : null}
+        {!info.next ? (
+          <Button
+            onClick={handleNext}
+            disabled={selected === null || (subOptions.length && !subOptionVal)}
+          >
+            Done
+          </Button>
+        ) : null}
       </div>
     </div>
   );
 };
 
 Question.propTypes = {
-  info: {
+  info: PropTypes.shape({
     question: PropTypes.string,
     next: PropTypes.string,
     prev: PropTypes.string,
-    options: PropTypes.arrayOf({
-      label: PropTypes.string,
-      type: PropTypes.string,
-      subOptions: PropTypes.arrayOf({
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
         label: PropTypes.string,
         type: PropTypes.string,
-      }),
-    }),
-  }.isRequired,
+        next: PropTypes.string,
+        subOptions: PropTypes.arrayOf(
+          PropTypes.shape({
+            label: PropTypes.string,
+            type: PropTypes.string,
+          })
+        ),
+      })
+    ),
+  }).isRequired,
   handleNav: PropTypes.func.isRequired,
 };
 

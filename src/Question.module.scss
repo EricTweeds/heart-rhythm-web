@@ -4,6 +4,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px;
+
+  .title {
+    margin-bottom: 50px;
+    font-size: 20px;
+  }
 
 
   .optionRow {

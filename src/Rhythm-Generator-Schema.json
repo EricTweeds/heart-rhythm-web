@@ -40,6 +40,7 @@
         "options": [
             {
                 "label": "Atrial",
+                "type": "boolean",
                 "subOptions": [
                     {
                         "label": "Regular",
@@ -57,6 +58,7 @@
             },
             {
                 "label": "Ventricular",
+                "type": "boolean",
                 "subOptions": [
                     {
                         "label": "Regular",

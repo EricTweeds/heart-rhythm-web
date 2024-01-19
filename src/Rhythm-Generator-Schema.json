@@ -1,0 +1,262 @@
+{
+    "1": {
+        "question": "What is the rate?",
+        "next": "2",
+        "options": [
+            {
+                "label": "Atrial Rate",
+                "type": "boolean",
+                "subOptions": [
+                    {
+                        "label": "Enter a rate",
+                        "type": "number"
+                    },
+                    {
+                        "label": "Unable to assess",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "label": "Vetricular Rate",
+                "type": "boolean",
+                "subOptions": [
+                    {
+                        "label": "Enter a rate",
+                        "type": "number"
+                    },
+                    {
+                        "label": "Unable to assess",
+                        "type": "boolean"
+                    }
+                ]
+            }
+        ]
+    },
+    "2": {
+        "question": "Is the rhythm regular?",
+        "next": "3",
+        "prev": "1",
+        "options": [
+            {
+                "label": "Atrial",
+                "subOptions": [
+                    {
+                        "label": "Regular",
+                        "type": "boolean"
+                    },
+                    {
+                        "label": "Irregular",
+                        "type": "boolean"
+                    },
+                    {
+                        "label": "Not Measurable",
+                        "type": "boolean"
+                    }
+                ]
+            },
+            {
+                "label": "Ventricular",
+                "subOptions": [
+                    {
+                        "label": "Regular",
+                        "type": "boolean"
+                    },
+                    {
+                        "label": "Irregular",
+                        "type": "boolean"
+                    },
+                    {
+                        "label": "Not Measurable",
+                        "type": "boolean"
+                    }
+                ]
+            }
+        ]
+    },
+    "3": {
+        "question": "Are there any premature (early) or escape (late) beats in the ryhthm?",
+        "prev": "2",
+        "next": "4",
+        "options": [
+            {
+                "label": "Premature",
+                "type": "boolean",
+                "next": "8"
+            },
+            {
+                "label": "Escape",
+                "type": "boolean",
+                "next": "8"
+            },
+            {
+                "label": "No",
+                "type": "boolean",
+                "next": "4"
+            }
+        ]
+    },
+    "4": {
+        "question": "Is there a pause/arrest in the rhythm?",
+        "next": "5",
+        "prev": "3",
+        "options": [
+            {
+                "label": "No",
+                "type": "boolean"
+            },
+            {
+                "label": "Yes",
+                "type": "boolean",
+                "condition": "with a pause/arrest"
+            }
+        ]
+    },
+    "5": {
+        "question": "Asses the P waves",
+        "next": "6",
+        "prev": "4",
+        "options": [
+            {
+                "label": "Positive/upright (normal)",
+                "type": "boolean"
+            },
+            {
+                "label": "Inverted",
+                "type": "boolean"
+            },
+            {
+                "label": "No P wave",
+                "type": "boolean"
+            },
+            {
+                "label": "Varies/changes with different beats",
+                "type": "boolean"
+            },
+            {
+                "label": "Buried/unsure if present",
+                "type": "boolean"
+            },
+            {
+                "label": "Fibrillating",
+                "type": "boolean"
+            },
+            {
+                "label": "Fluttering",
+                "type": "boolean"
+            }
+        ]
+    },
+    "6": {
+        "question": "Assess the PR intervals",
+        "next": "7",
+        "prev": "5",
+        "options": [
+            {
+                "label": "None/unable to asses",
+                "type": "boolean"
+            },
+            {
+                "label": "Interval Length",
+                "subOptions": [
+                    {
+                        "label": "Short (< 0.12)",
+                        "type": "boolean"
+                    },
+                    {
+                        "label": "Normal (0.12 - 0.20)",
+                        "type": "boolean"
+                    },
+                    {
+                        "label": "Long (> 0.20)",
+                        "type": "boolean",
+                        "condition": "with a first degree block"
+                    }
+                ]
+            },
+            {
+                "label": "Varies/changing or lengthening",
+                "type": "boolean"
+            },
+            {
+                "label": "Normal or long. Also has P waves without QRS complexes",
+                "type": "boolean"
+            }
+        ]
+    },
+    "7": {
+        "question": "Assess the QRS interval",
+        "prev": "6",
+        "next": "8",
+        "options": [
+            {
+                "label": "Short (< 0.06)",
+                "type": "boolean"
+            },
+            {
+                "label": "Normal (0.06 - 0.12)",
+                "type": "boolean"
+            },
+            {
+                "label": "Wide (> 0.12)",
+                "type": "boolean"
+            }
+        ]
+    },
+    "8": {
+        "question": "Assess the P wave",
+        "prev": "3",
+        "next": "9",
+        "options": [
+            {
+                "label": "Upright",
+                "type": "boolean"
+            },
+            {
+                "label": "Inverted",
+                "type": "boolean"
+            },
+            {
+                "label": "No P Wave",
+                "type": "boolean"
+            }
+        ]
+    },
+    "9": {
+        "question": "Assess the PR Interval",
+        "prev": "8",
+        "next": "10",
+        "options": [
+            {
+                "label": "None",
+                "type": "boolean"
+            },
+            {
+                "label": "Short (< 0.12)",
+                "type": "boolean"
+            },
+            {
+                "label": "Normal (0.12 - 0.20)",
+                "type": "boolean"
+            }
+        ]
+    },
+    "10": {
+        "question": "Assess the QRS Interval",
+        "prev": "9",
+        "options": [
+            {
+                "label": "Short (< 0.6)",
+                "type": "boolean"
+            },
+            {
+                "label": "Normal (0.6 - 1.2)",
+                "type": "boolean"
+            },
+            {
+                "label": "Wide (> 0.12)",
+                "type": "boolean"
+            }
+        ]
+    }
+}

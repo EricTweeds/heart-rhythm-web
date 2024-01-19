@@ -7,6 +7,7 @@
         "@emotion/styled": "^11.11.0",
         "@mui/icons-material": "^5.15.5",
         "@mui/material": "^5.15.5",
+        "aws-amplify": "^6.0.12",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "sass": "^1.55.0"
@@ -16,7 +17,12 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@aws-amplify/backend": "^0.10.2",
+        "@aws-amplify/backend-cli": "^0.9.7",
         "@vitejs/plugin-react": "^4.0.3",
+        "aws-cdk": "^2.122.0",
+        "aws-cdk-lib": "^2.122.0",
+        "constructs": "^10.3.0",
         "eslint": "^8.28.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.5.0",
@@ -30,6 +36,7 @@
         "lint-staged": "^13.0.3",
         "node-sass": "^8.0.0",
         "prettier": "^2.7.1",
+        "typescript": "^5.3.3",
         "vite": "^4.4.4",
         "vite-plugin-checker": "^0.6.1",
         "vite-plugin-env-compatible": "^1.1.1",

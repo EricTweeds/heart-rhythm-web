@@ -4,45 +4,39 @@ import PropTypes from "prop-types";
 import { Button } from "@mui/material";
 import styles from "./Question.module.scss";
 
-const Question = ({ info, handleNav }) => {
+const MultiQuestion = ({ info, handleNav }) => {
   const [subOptions, setSubOptions] = useState([]);
-  const [selected, setSelected] = useState(null);
-  const [subOptionVal, setSubOptionVal] = useState(null);
-
-  const handleSelection = (i) => {
-    setSelected(i);
-    if (info.options[i].subOptions?.length) {
-      setSubOptions(info.options[i].subOptions);
-    }
-  };
+  const [subOptionVal, setSubOptionVal] = useState({});
 
   const handleNext = () => {
-    const next = info.options[selected].next ?? info.next;
-    handleNav(next, info.options[selected], subOptionVal);
-    setSelected(null);
-    setSubOptionVal(null);
+    handleNav(info.next, info.options, subOptionVal);
+    setSubOptionVal({});
     setSubOptions([]);
   };
 
   const handlePrev = () => {
-    handleNav(info.prev, info.options[selected], subOptionVal);
-    setSelected(null);
-    setSubOptionVal(null);
+    handleNav(info.prev, info.options, subOptionVal);
+    setSubOptionVal({});
     setSubOptions([]);
   };
 
-  const renderSubOption = (option) => {
+  const handleSubOptionVal = (val, i) => {
+    const currVal = { ...subOptionVal } ?? {};
+    currVal[i] = val;
+    setSubOptionVal(currVal);
+  };
+
+  const renderSubOption = (option, index) => {
     switch (option.type) {
       case "number":
         return (
           <div className={styles.subOptions} key={option.label}>
-            <div className={styles.option}>{option.label}</div>
             <input
               className={styles.numberInput}
               pattern="\d*"
               type="number"
-              value={subOptionVal ?? 0}
-              onChange={(e) => setSubOptionVal(e.target.value)}
+              value={subOptionVal[index] ?? ""}
+              onChange={(e) => handleSubOptionVal(e.target.value, index)}
             />
           </div>
         );
@@ -52,11 +46,14 @@ const Question = ({ info, handleNav }) => {
             <Button
               className={styles.option}
               onClick={() =>
-                setSubOptionVal(
-                  subOptionVal === option.label ? null : option.label
+                handleSubOptionVal(
+                  subOptionVal[index] === option.label ? null : option.label,
+                  index
                 )
               }
-              variant={subOptionVal === option.label ? "contained" : "outlined"}
+              variant={
+                subOptionVal[index] === option.label ? "contained" : "outlined"
+              }
             >
               {option.label}
             </Button>
@@ -72,14 +69,10 @@ const Question = ({ info, handleNav }) => {
       <div className={styles.optionRow}>
         {info.options.map((option, i) => {
           return (
-            <Button
-              className={styles.option}
-              key={option.label}
-              variant={selected === i ? "contained" : "outlined"}
-              onClick={() => handleSelection(i)}
-            >
-              {option.label}
-            </Button>
+            <div key={option.label} className={styles.option}>
+              <div className={styles.optionLabel}>{option.label}</div>
+              {option.subOptions.map((o) => renderSubOption(o, i))}
+            </div>
           );
         })}
       </div>
@@ -97,7 +90,8 @@ const Question = ({ info, handleNav }) => {
           <Button
             onClick={handleNext}
             disabled={
-              !!(selected === null || (subOptions.length && !subOptionVal))
+              !Object.values(subOptionVal).every((v) => v) ||
+              Object.values(subOptionVal).length < 2
             }
           >
             Next
@@ -107,7 +101,8 @@ const Question = ({ info, handleNav }) => {
           <Button
             onClick={handleNext}
             disabled={
-              !!(selected === null || (subOptions.length && !subOptionVal))
+              !Object.values(subOptionVal).every((v) => v) ||
+              Object.values(subOptionVal).length < 2
             }
           >
             Done
@@ -118,7 +113,7 @@ const Question = ({ info, handleNav }) => {
   );
 };
 
-Question.propTypes = {
+MultiQuestion.propTypes = {
   info: PropTypes.shape({
     question: PropTypes.string,
     next: PropTypes.string,
@@ -140,4 +135,4 @@ Question.propTypes = {
   handleNav: PropTypes.func.isRequired,
 };
 
-export default Question;
+export default MultiQuestion;

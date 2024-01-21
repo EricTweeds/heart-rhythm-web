@@ -2,10 +2,11 @@
     "1": {
         "question": "What is the rate?",
         "next": "2",
+        "type": "multi",
         "options": [
             {
                 "label": "Atrial Rate",
-                "type": "boolean",
+                "type": "multi",
                 "subOptions": [
                     {
                         "label": "Enter a rate",
@@ -19,7 +20,7 @@
             },
             {
                 "label": "Vetricular Rate",
-                "type": "boolean",
+                "type": "multi",
                 "subOptions": [
                     {
                         "label": "Enter a rate",
@@ -37,6 +38,7 @@
         "question": "Is the rhythm regular?",
         "next": "3",
         "prev": "1",
+        "type": "multi",
         "options": [
             {
                 "label": "Atrial",

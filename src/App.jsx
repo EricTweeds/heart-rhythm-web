@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 
 import styles from "./App.module.scss";
 import Question from "./Question";
+import MultiQuestion from "./MultiQuestion";
 
 import questionSchema from "./Rhythm-Generator-Schema.json";
 
@@ -17,13 +18,19 @@ const App = () => {
       return res;
     });
   };
+
+  const renderQuestion = (q) => {
+    if (q.type === "multi") {
+      return <MultiQuestion info={q} handleNav={handleNav} />;
+    }
+    return (
+      <Question info={questionSchema[currentQuestion]} handleNav={handleNav} />
+    );
+  };
   return (
     <div className={styles.app}>
       {questionSchema[currentQuestion] ? (
-        <Question
-          info={questionSchema[currentQuestion]}
-          handleNav={handleNav}
-        />
+        renderQuestion(questionSchema[currentQuestion])
       ) : (
         <div>
           <div>Results</div>

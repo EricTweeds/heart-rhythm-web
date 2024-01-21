@@ -214,14 +214,17 @@
         "options": [
             {
                 "label": "Upright",
+                "value": "upright",
                 "type": "boolean"
             },
             {
                 "label": "Inverted",
+                "value": "inverted",
                 "type": "boolean"
             },
             {
                 "label": "No P Wave",
+                "value": "none",
                 "type": "boolean"
             }
         ]
@@ -233,14 +236,17 @@
         "options": [
             {
                 "label": "None",
+                "value": "none",
                 "type": "boolean"
             },
             {
                 "label": "Short (< 0.12)",
+                "value": "short",
                 "type": "boolean"
             },
             {
                 "label": "Normal (0.12 - 0.20)",
+                "value": "normal",
                 "type": "boolean"
             }
         ]
@@ -251,14 +257,17 @@
         "options": [
             {
                 "label": "Short (< 0.6)",
+                "value": "short",
                 "type": "boolean"
             },
             {
                 "label": "Normal (0.6 - 1.2)",
+                "value": "normal",
                 "type": "boolean"
             },
             {
                 "label": "Wide (> 0.12)",
+                "value": "wide",
                 "type": "boolean"
             }
         ]

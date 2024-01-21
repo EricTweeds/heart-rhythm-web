@@ -665,9 +665,9 @@
         },
         {
             "name": "Ventricular Escape Beat",
-            "PWave": "none",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         }
     ]
 }

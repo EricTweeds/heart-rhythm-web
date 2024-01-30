@@ -21,8 +21,6 @@ const App = () => {
   };
 
   const renderResults = (results) => {
-    console.log(results);
-
     let patterns;
     let res = "Undetermined";
 

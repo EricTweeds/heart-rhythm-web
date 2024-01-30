@@ -47,12 +47,12 @@ const MultiQuestion = ({ info, handleNav }) => {
               className={styles.option}
               onClick={() =>
                 handleSubOptionVal(
-                  subOptionVal[index] === option.label ? null : option.label,
+                  subOptionVal[index] === option.value ? null : option.value,
                   index
                 )
               }
               variant={
-                subOptionVal[index] === option.label ? "contained" : "outlined"
+                subOptionVal[index] === option.value ? "contained" : "outlined"
               }
             >
               {option.label}

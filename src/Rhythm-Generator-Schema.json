@@ -13,8 +13,14 @@
                         "type": "number"
                     },
                     {
+                        "label": "None",
+                        "type": "boolean",
+                        "value": "none"
+                    },
+                    {
                         "label": "Unable to assess",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "unable to assess"
                     }
                 ]
             },
@@ -27,8 +33,14 @@
                         "type": "number"
                     },
                     {
+                        "label": "None",
+                        "type": "boolean",
+                        "value": "none"
+                    },
+                    {
                         "label": "Unable to assess",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "unable to assess"
                     }
                 ]
             }
@@ -46,15 +58,18 @@
                 "subOptions": [
                     {
                         "label": "Regular",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "regular"
                     },
                     {
                         "label": "Irregular",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "irregular"
                     },
                     {
                         "label": "Not Measurable",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "not measurable"
                     }
                 ]
             },
@@ -64,15 +79,18 @@
                 "subOptions": [
                     {
                         "label": "Regular",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "regular"
                     },
                     {
                         "label": "Irregular",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "irregular"
                     },
                     {
                         "label": "Not Measurable",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "not measurable"
                     }
                 ]
             }
@@ -107,11 +125,13 @@
         "options": [
             {
                 "label": "No",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "no"
             },
             {
                 "label": "Yes",
                 "type": "boolean",
+                "value": "yes",
                 "condition": "with a pause/arrest"
             }
         ]
@@ -123,31 +143,38 @@
         "options": [
             {
                 "label": "Positive/upright (normal)",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "positive"
             },
             {
                 "label": "Inverted",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "inverted"
             },
             {
                 "label": "No P wave",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "none"
             },
             {
                 "label": "Varies/changes with different beats",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "varies"
             },
             {
                 "label": "Buried/unsure if present",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "buried"
             },
             {
                 "label": "Fibrillating",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "fibrillating"
             },
             {
                 "label": "Fluttering",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "fluttering"
             }
         ]
     },
@@ -158,52 +185,60 @@
         "options": [
             {
                 "label": "None/unable to asses",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "none"
             },
             {
                 "label": "Interval Length",
                 "subOptions": [
                     {
                         "label": "Short (< 0.12)",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "short"
                     },
                     {
                         "label": "Normal (0.12 - 0.20)",
-                        "type": "boolean"
+                        "type": "boolean",
+                        "value": "normal"
                     },
                     {
                         "label": "Long (> 0.20)",
                         "type": "boolean",
+                        "value": "long",
                         "condition": "with a first degree block"
                     }
                 ]
             },
             {
                 "label": "Varies/changing or lengthening",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "varies"
             },
             {
                 "label": "Normal or long. Also has P waves without QRS complexes",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "normal"
             }
         ]
     },
     "7": {
         "question": "Assess the QRS interval",
         "prev": "6",
-        "next": "8",
         "options": [
             {
                 "label": "Short (< 0.06)",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "short"
             },
             {
                 "label": "Normal (0.06 - 0.12)",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "normal"
             },
             {
                 "label": "Wide (> 0.12)",
-                "type": "boolean"
+                "type": "boolean",
+                "value": "wide"
             }
         ]
     },

@@ -11,12 +11,12 @@
                 "min": 61
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "normal"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Normal Sinus Rhythm with Aberrancy",
@@ -29,12 +29,12 @@
                 "min": 61
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "wide"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Sinus Dysrhythmia",
@@ -47,12 +47,12 @@
                 "min": 61
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "normal"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Sinus Dysrhythmia with Aberrancy",
@@ -65,12 +65,12 @@
                 "min": 61
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "wide"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Sinus Bradycardia",
@@ -81,12 +81,12 @@
                 "max": 60
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "normal"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Sinus Bradycardia with Aberrancy",
@@ -97,12 +97,12 @@
                 "max": 60
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "wide"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Sinus Tachycardia",
@@ -115,12 +115,12 @@
                 "min": 100
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "normal"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Sinus Tachycardia with Aberrancy",
@@ -133,12 +133,12 @@
                 "min": 100
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "normal",
-            "QRSComplex": "wide"
+            "PWave": ["positive"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Wandering Pacemaker",
@@ -151,12 +151,12 @@
                 "min": 60
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "Varies/changes with different beats",
-            "PRInterval": "varies",
-            "QRSComplex": "normal"
+            "PWave": ["varies"],
+            "PRInterval": ["varies"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Wandering Pacemaker with Aberrancy",
@@ -169,12 +169,12 @@
                 "min": 60
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "Varies/changes with different beats",
-            "PRInterval": "varies",
-            "QRSComplex": "wide"
+            "PWave": ["varies"],
+            "PRInterval": ["varies"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Multifocal Atrial Tachycardia",
@@ -187,12 +187,12 @@
                 "min": 100
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": ["Varies/changes with different beats", "buried, unable to assess"],
-            "PRInterval": "varies",
-            "QRSComplex": "normal"
+            "PWave": ["varies", "buried, unable to assess"],
+            "PRInterval": ["varies"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Multifocal Atrial Tachycardia with Aberrancy",
@@ -205,12 +205,12 @@
                 "min": 100
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": ["Varies/changes with different beats", "buried, unable to assess"],
-            "PRInterval": "varies",
-            "QRSComplex": "wide"
+            "PWave": ["varies", "buried, unable to assess"],
+            "PRInterval": ["varies"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Supraventricular Tachycardia",
@@ -223,12 +223,12 @@
                 "min": 150
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": ["Buried", "No P Wave"],
-            "PRInterval": "none/unable to assess",
-            "QRSComplex": "normal"
+            "PWave": ["buried", "none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Supraventricular Tachycardia with Aberrancy",
@@ -244,9 +244,9 @@
                 "atrial": ["regular", "irregular"],
                 "ventricular": ["regular", "irregular"]
             },
-            "PWave": ["Buried", "No P Wave"],
-            "PRInterval": "none/unable to assess",
-            "QRSComplex": "wide"
+            "PWave": ["buried", "none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Atrial Fibrillation",
@@ -260,12 +260,12 @@
                 "min": 40
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "fibrilating",
-            "PRInterval": "none",
-            "QRSComplex": "normal"
+            "PWave": ["fibrilating"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Atrial Fibrillation with Aberrancy",
@@ -279,12 +279,12 @@
                 "min": 40
             },
             "rhythm": {
-                "atrial": "irregular",
-                "ventricular": "irregular"
+                "atrial": ["irregular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "fibrilating",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["fibrilating"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Atrial Flutter",
@@ -301,9 +301,9 @@
                 "atrial": ["regular", "irregular"],
                 "ventricular": ["regular", "irregular"]
             },
-            "PWave": "fluttering",
-            "PRInterval": "none",
-            "QRSComplex": "normal"
+            "PWave": ["fluttering"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Atrial Flutter with Aberrancy",
@@ -320,9 +320,9 @@
                 "atrial": ["regular", "irregular"],
                 "ventricular": ["regular", "irregular"]
             },
-            "PWave": "fluttering",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["fluttering"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Junctional Escape Rhythm",
@@ -335,12 +335,12 @@
                 "min": 40
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": ["Inverted", "No P Wave"],
+            "PWave": ["inverted", "none"],
             "PRInterval": ["none", "short"],
-            "QRSComplex": "normal"
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Junctional Escape Rhythm with Aberrancy",
@@ -353,12 +353,12 @@
                 "min": 40
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": ["Inverted", "No P Wave"],
+            "PWave": ["inverted", "none"],
             "PRInterval": ["none", "short"],
-            "QRSComplex": "wide"
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Acceleration Junctional Rhythm",
@@ -371,12 +371,12 @@
                 "min": 60
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": ["Inverted", "No P Wave"],
+            "PWave": ["inverted", "none"],
             "PRInterval": ["none", "short"],
-            "QRSComplex": "normal"
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Acceleration Junctional Rhythm with Aberrancy",
@@ -389,12 +389,12 @@
                 "min": 60
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": ["Inverted", "No P Wave"],
+            "PWave": ["inverted", "none"],
             "PRInterval": ["none", "short"],
-            "QRSComplex": "wide"
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Junctional Tachycardia",
@@ -407,12 +407,12 @@
                 "min": 101
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": ["Inverted", "No P Wave"],
+            "PWave": ["inverted", "none"],
             "PRInterval": ["none", "short"],
-            "QRSComplex": "normal"
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Junctional Tachycardia with Aberrancy",
@@ -425,12 +425,12 @@
                 "min": 101
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": ["Inverted", "No P Wave"],
+            "PWave": ["inverted", "none"],
             "PRInterval": ["none", "short"],
-            "QRSComplex": "wide"
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Idioventricular Rhythm",
@@ -442,12 +442,12 @@
                 "min": 20
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "none",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Accelerated Idioventricular Rhythm",
@@ -459,12 +459,12 @@
                 "min": 41
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "none",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Ventricular Tachycardia",
@@ -476,12 +476,12 @@
                 "min": 101
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "none",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Ventricular Fibrillation",
@@ -494,12 +494,12 @@
                 "other": "Unable to assess"
             },
             "rhythm": {
-                "atrial": "Not measurable",
-                "ventricular": "Not measurable"
+                "atrial": ["not measurable"],
+                "ventricular": ["not measurable"]
             },
-            "PWave": "none",
-            "PRInterval": "none",
-            "QRSComplex": "none"
+            "PWave": ["none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["none"]
         },
         {
             "name": "Asystole",
@@ -510,12 +510,12 @@
                 "max": 0
             },
             "rhythm": {
-                "atrial": "none",
-                "ventricular": "none"
+                "atrial": ["none"],
+                "ventricular": ["none"]
             },
-            "PWave": "none",
-            "PRInterval": "none",
-            "QRSComplex": "none"
+            "PWave": ["none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["none"]
         },
         {
             "name": "Second degree block type one",
@@ -528,12 +528,12 @@
                 "min": 30
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "irregular"
+                "atrial": ["regular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "normal",
-            "PRInterval": ["varies/changes", "lengthening"],
-            "QRSComplex": "normal"
+            "PWave": ["normal"],
+            "PRInterval": ["varies"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Second degree block type one with Aberrancy",
@@ -546,12 +546,12 @@
                 "min": 30
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "irregular"
+                "atrial": ["regular"],
+                "ventricular": ["irregular"]
             },
-            "PWave": "normal",
-            "PRInterval": ["varies/changes", "lengthening"],
-            "QRSComplex": "wide"
+            "PWave": ["normal"],
+            "PRInterval": ["varies"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Second degree block type two",
@@ -565,12 +565,12 @@
                 "other": "atrial rate greater than ventricular rate"
             },
             "rhythm": {
-                "atrial": "regular",
+                "atrial": ["regular"],
                 "ventricular": ["regular", "irregular"]
             },
-            "PWave": "positive",
+            "PWave": ["positive"],
             "PRInterval": ["normal", "long"],
-            "QRSComplex": "normal"
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Second degree block type two with Aberrancy",
@@ -584,12 +584,12 @@
                 "other": "atrial rate greater than ventricular rate"
             },
             "rhythm": {
-                "atrial": "regular",
+                "atrial": ["regular"],
                 "ventricular": ["regular", "irregular"]
             },
-            "PWave": "positive",
+            "PWave": ["positive"],
             "PRInterval": ["normal", "long"],
-            "QRSComplex": "wide"
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Third degree block",
@@ -603,12 +603,12 @@
                 "other": "atrial rate greater than ventricular rate"
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "none",
-            "QRSComplex": "normal"
+            "PWave": ["positive"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Third degree block with Aberrancy",
@@ -622,26 +622,26 @@
                 "other": "atrial rate greater than ventricular rate"
             },
             "rhythm": {
-                "atrial": "regular",
-                "ventricular": "regular"
+                "atrial": ["regular"],
+                "ventricular": ["regular"]
             },
-            "PWave": "positive",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["positive"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         }
     ],
     "prematureRhythms": [
         {
             "name": "Premature atrial complex (PAC)",
-            "PWave": "normal",
-            "PRInterval": "normal",
-            "QRSComplex": "normal"
+            "PWave": ["upright"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["normal"]
         },
         {
             "name": "Premature aberrant complex",
-            "PWave": "normal",
-            "PRInterval": "normal",
-            "QRSComplex": "wide"
+            "PWave": ["upright"],
+            "PRInterval": ["normal"],
+            "QRSComplex": ["wide"]
         },
         {
             "name": "Premature junctional complex (PJC)",
@@ -651,9 +651,9 @@
         },
         {
             "name": "Premature ventricular complex (PVC)",
-            "PWave": "none",
-            "PRInterval": "none",
-            "QRSComplex": "wide"
+            "PWave": ["none"],
+            "PRInterval": ["none"],
+            "QRSComplex": ["wide"]
         }
     ],
     "escapeRhythms": [
